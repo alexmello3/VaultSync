@@ -1,9 +1,9 @@
-package br.com.alexmendonca.vaultsync;
+package org.vaultsync;
 
 import java.util.ArrayList;
 import java.util.List;
-import br.com.alexmendonca.vaultsync.cofre.ICofre;
-import br.com.alexmendonca.vaultsync.cofre.CofreFactory;
+import org.vaultsync.cofre.ICofre;
+import org.vaultsync.cofre.CofreFactory;
 
 public class Main {
 

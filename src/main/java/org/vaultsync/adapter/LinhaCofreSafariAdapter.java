@@ -1,6 +1,6 @@
-package br.com.alexmendonca.vaultsync.adapter;
+package org.vaultsync.adapter;
 
-import br.com.alexmendonca.vaultsync.cofre.ILinhaCofre;
+import org.vaultsync.cofre.ILinhaCofre;
 
 public class LinhaCofreSafariAdapter implements ILinhaCofreAdapter {
     @Override

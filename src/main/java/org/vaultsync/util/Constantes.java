@@ -1,4 +1,4 @@
-package br.com.alexmendonca.vaultsync.util;
+package org.vaultsync.util;
 
 public class Constantes {
     public static final String TIPO_COFRE_FIREFOX = "firefox";

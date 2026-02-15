@@ -1,6 +1,6 @@
-package br.com.alexmendonca.vaultsync.cofre;
+package org.vaultsync.cofre;
 
-import br.com.alexmendonca.vaultsync.util.Constantes;
+import org.vaultsync.util.Constantes;
 
 public class LinhaCofreSafari implements ILinhaCofre {
     private String title;

@@ -1,4 +1,4 @@
-package br.com.alexmendonca.vaultsync.cofre;
+package org.vaultsync.cofre;
 
 public interface ILinhaCofre {
         public String getUrl();

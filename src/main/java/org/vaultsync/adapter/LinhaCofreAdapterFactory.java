@@ -1,6 +1,6 @@
-package br.com.alexmendonca.vaultsync.adapter;
+package org.vaultsync.adapter;
 
-import br.com.alexmendonca.vaultsync.util.Constantes;
+import org.vaultsync.util.Constantes;
 
 public class LinhaCofreAdapterFactory {
     public static ILinhaCofreAdapter getLinhaCofreAdapter(String tipoCofreSaida) {

@@ -1,4 +1,4 @@
-package br.com.alexmendonca.vaultsync.cofre;
+package org.vaultsync.cofre;
 
 public class CofreFactory {
     public static ICofre criarCofre(String arquivo) {

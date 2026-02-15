@@ -1,4 +1,4 @@
-package br.com.alexmendonca.vaultsync.cofre;
+package org.vaultsync.cofre;
 
 import java.util.List;
 import com.opencsv.CSVReader;
