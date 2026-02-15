@@ -1,136 +1,136 @@
 # 🔐 VaultSync
 
-**Sincronizador de Cofres de Senhas entre Plataformas**
+**Cross-Platform Password Vault Synchronizer**
 
-VaultSync é um sincronizador modular de cofres de senhas que permite manter dados consistentes entre diferentes ecossistemas — como **macOS, Linux e dispositivos móveis** — sem obrigar o usuário a abandonar as soluções nativas de cada plataforma.
+VaultSync is a modular password vault synchronizer that allows keeping data consistent across different ecosystems — such as **macOS, Linux, and mobile devices** — without forcing users to abandon native solutions for each platform.
 
-O objetivo é permitir interoperabilidade sem sacrificar qualidade de integração local, como detecção automática de formulários, integração com navegador ou recursos do sistema.
+The goal is to enable interoperability without sacrificing local integration quality, such as automatic form detection, browser integration, or system features.
 
 ---
 
-## 🎯 Motivação
+## 🎯 Motivation
 
-Muitos usuários utilizam múltiplos sistemas:
+Many users work across multiple systems:
 
 * 💻 macOS
 * 🐧 Linux
-* 📱 iPhone / dispositivos móveis
-* 🖥 Ambientes híbridos ou homelab
+* 📱 iPhone / mobile devices
+* 🖥 Hybrid environments or homelab
 
-As soluções nativas de cada plataforma frequentemente oferecem melhor integração com o sistema operacional. No entanto, elas nem sempre conversam entre si.
+Native solutions for each platform often offer better integration with the operating system. However, they don't always communicate with each other.
 
-O VaultSync surge como uma ponte ética e transparente entre esses mundos.
-
----
-
-## 🧭 Filosofia do Projeto
-
-Este projeto segue a metodologia e os princípios defendidos pelo **GNU Project**, fundado por **Richard Stallman**:
-
-* 🔓 O usuário deve ter controle total sobre seu software
-* 📖 O código deve ser auditável
-* 🛠 O sistema deve ser modificável
-* 🤝 A colaboração é parte essencial do desenvolvimento
-
-O VaultSync é Software Livre e adota uma postura ética clara:
-
-> A liberdade do usuário vem antes da conveniência comercial.
+VaultSync emerges as an ethical and transparent bridge between these worlds.
 
 ---
 
-## 🧱 Arquitetura Modular
+## 🧭 Project Philosophy
 
-Inspirado pela filosofia Unix e pelo ecossistema GNU:
+This project follows the methodology and principles advocated by the **GNU Project**, founded by **Richard Stallman**:
 
-> Cada componente faz apenas uma coisa — e a faz bem.
+* 🔓 Users should have full control over their software
+* 📖 Code should be auditable
+* 🛠 Systems should be modifiable
+* 🤝 Collaboration is an essential part of development
 
-O projeto é dividido em módulos independentes:
+VaultSync is Free Software and adopts a clear ethical stance:
 
-| Componente       | Responsabilidade                                |
+> User freedom comes before commercial convenience.
+
+---
+
+## 🧱 Modular Architecture
+
+Inspired by Unix philosophy and the GNU ecosystem:
+
+> Each component does just one thing — and does it well.
+
+The project is divided into independent modules:
+
+| Component        | Responsibility                                  |
 | ---------------- | ----------------------------------------------- |
-| `vault-reader-*` | Leitura de um formato específico de cofre       |
-| `vault-writer-*` | Escrita em um formato específico                |
-| `sync-engine`    | Motor de sincronização e resolução de conflitos |
-| `crypto-core`    | Criptografia e validação                        |
-| `cli`            | Interface de linha de comando                   |
+| `vault-reader-*` | Reading a specific vault format                 |
+| `vault-writer-*` | Writing to a specific format                    |
+| `sync-engine`    | Synchronization engine and conflict resolution  |
+| `crypto-core`    | Cryptography and validation                     |
+| `cli`            | Command-line interface                          |
 
-### 🔄 Vantagens da Arquitetura
+### 🔄 Architecture Advantages
 
-* 🔌 Componentes reutilizáveis
-* 🔄 Possibilidade de integração com outros sistemas
-* 🧪 Testabilidade isolada
-* 🧩 Flexibilidade para criar novos adaptadores
-* 🚫 Ausência de dependência obrigatória de um único backend
+* 🔌 Reusable components
+* 🔄 Possibility of integration with other systems
+* 🧪 Isolated testability
+* 🧩 Flexibility to create new adapters
+* 🚫 No mandatory dependency on a single backend
 
-Você pode usar apenas o `crypto-core`.
-Ou apenas o `sync-engine`.
-Ou integrar o projeto ao seu próprio sistema.
-
----
-
-## 🔐 Segurança
-
-* Criptografia ponta-a-ponta
-* Processamento local por padrão
-* Nenhuma dependência de serviços proprietários obrigatórios
-* Código auditável
-
-Segurança não é opcional — é requisito.
+You can use just the `crypto-core`.
+Or just the `sync-engine`.
+Or integrate the project into your own system.
 
 ---
 
-## 🚀 Casos de Uso
+## 🔐 Security
 
-* Sincronizar cofre entre macOS e Linux
-* Manter compatibilidade entre dispositivos móveis e desktop
-* Integrar cofres com automações de homelab
-* Criar pipelines personalizados de sincronização
+* End-to-end encryption
+* Local processing by default
+* No mandatory dependency on proprietary services
+* Auditable code
+
+Security is not optional — it's a requirement.
 
 ---
 
-## 🛠 Tecnologias
+## 🚀 Use Cases
+
+* Synchronize vault between macOS and Linux
+* Maintain compatibility between mobile and desktop devices
+* Integrate vaults with homelab automations
+* Create custom synchronization pipelines
+
+---
+
+## 🛠 Technologies
 
 * Java
 * CLI-first
-* Arquitetura orientada a módulos
-* Foco em portabilidade
+* Module-oriented architecture
+* Focus on portability
 
 ---
 
-## 🤝 Contribuições
+## 🤝 Contributions
 
-Este projeto é aberto a contribuições.
+This project is open to contributions.
 
-Você pode ajudar com:
+You can help with:
 
-* Implementação de novos adaptadores de cofre
-* Revisões de segurança
-* Melhorias no mecanismo de sincronização
-* Testes
-* Documentação
-* Auditorias criptográficas
+* Implementation of new vault adapters
+* Security reviews
+* Improvements to the synchronization mechanism
+* Testing
+* Documentation
+* Cryptographic audits
 
-Se você acredita na ética do Software Livre e na autonomia do usuário, sua participação é bem-vinda.
+If you believe in Free Software ethics and user autonomy, your participation is welcome.
 
-Abra uma issue.
-Envie um pull request.
-Discuta ideias.
+Open an issue.
+Send a pull request.
+Discuss ideas.
 
-Colaboração constrói liberdade.
-
----
-
-## 📜 Licença
-
-Este projeto é distribuído sob uma licença de Software Livre compatível com os princípios do **Free Software Foundation**.
-
-Consulte o arquivo `LICENSE` para detalhes.
+Collaboration builds freedom.
 
 ---
 
-## ✊ Declaração de Princípios
+## 📜 License
 
-VaultSync não existe para criar dependência.
-Existe para devolver controle.
+This project is distributed under a Free Software license compatible with the principles of the **Free Software Foundation**.
 
-Em um mundo de silos digitais, interoperabilidade é um ato de liberdade.
+See the `LICENSE` file for details.
+
+---
+
+## ✊ Declaration of Principles
+
+VaultSync does not exist to create dependency.
+It exists to return control.
+
+In a world of digital silos, interoperability is an act of freedom.

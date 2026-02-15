@@ -1,8 +1,8 @@
-package org.vaultsync.cofre;
+package org.vaultsync.vault;
 
-import org.vaultsync.util.Constantes;
+import org.vaultsync.util.Constants;
 
-public class LinhaCofreFirefox implements ILinhaCofre {
+public class FirefoxVaultEntry implements IVaultEntry {
     private String url;
     private String username;
     private String password;
@@ -13,7 +13,7 @@ public class LinhaCofreFirefox implements ILinhaCofre {
     private String timeLastUsed;
     private String timePasswordChanged;
 
-    public LinhaCofreFirefox(String url, String username, String password, String httpRealm, String formActionOrigin, String guid, String timeCreated, String timeLastUsed, String timePasswordChanged) {
+    public FirefoxVaultEntry(String url, String username, String password, String httpRealm, String formActionOrigin, String guid, String timeCreated, String timeLastUsed, String timePasswordChanged) {
         this.url = url;
         this.username = username;
         this.password = password;
@@ -62,8 +62,8 @@ public class LinhaCofreFirefox implements ILinhaCofre {
     }
 
     @Override
-    public String getTipoCofre() {
-        return Constantes.TIPO_COFRE_FIREFOX;
+    public String getVaultType() {
+        return Constants.VAULT_TYPE_FIREFOX;
     }
 
     @Override
@@ -73,10 +73,10 @@ public class LinhaCofreFirefox implements ILinhaCofre {
 
     @Override
     public boolean equals(Object obj) {
-        // Considera duas linhas iguais se tiverem a mesma URL e username, ignorando o password
+        // Consider two entries equal if they have the same URL and username, ignoring password
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
-        ILinhaCofre other = (ILinhaCofre) obj;
+        IVaultEntry other = (IVaultEntry) obj;
         return url.equals(other.getUrl()) && username.equals(other.getUsername());
     }
 }

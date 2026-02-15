@@ -1,10 +1,10 @@
-package org.vaultsync.cofre;
+package org.vaultsync.vault;
 
-public interface ILinhaCofre {
+public interface IVaultEntry {
         public String getUrl();
         public String getUsername();
         public String getPassword();
-        public String getTipoCofre();
+        public String getVaultType();
         public int hashCode();
         public boolean equals(Object obj);
 }

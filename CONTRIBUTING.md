@@ -1,184 +1,184 @@
 # 🤝 Contributing to VaultSync
 
-Obrigado por considerar contribuir com o VaultSync.
+Thank you for considering contributing to VaultSync.
 
-Este projeto existe para promover interoperabilidade, autonomia do usuário e os princípios do Software Livre. Contribuir aqui não é apenas escrever código — é participar de um movimento que valoriza liberdade, transparência e responsabilidade técnica.
-
----
-
-## 🧭 Nossa Filosofia
-
-VaultSync segue os princípios defendidos pelo **GNU Project** e pela **Free Software Foundation**:
-
-* O usuário deve ter controle sobre seus dados.
-* O software deve poder ser estudado e modificado.
-* A colaboração fortalece o ecossistema.
-* Segurança deve ser verificável, não presumida.
-
-Toda contribuição deve respeitar esses princípios.
+This project exists to promote interoperability, user autonomy, and Free Software principles. Contributing here is not just about writing code — it's about participating in a movement that values freedom, transparency, and technical responsibility.
 
 ---
 
-## 🧱 Arquitetura e Diretrizes Técnicas
+## 🧭 Our Philosophy
 
-O projeto adota uma arquitetura modular inspirada na filosofia Unix:
+VaultSync follows the principles advocated by the **GNU Project** and the **Free Software Foundation**:
 
-> Cada componente faz apenas uma coisa — e a faz bem.
+* Users should have control over their data.
+* Software should be able to be studied and modified.
+* Collaboration strengthens the ecosystem.
+* Security should be verifiable, not presumed.
 
-Ao contribuir:
-
-* Não introduza dependências desnecessárias.
-* Evite acoplamento entre módulos.
-* Prefira simplicidade a abstrações excessivas.
-* Mantenha responsabilidade única por módulo.
-* Escreva código legível antes de código “inteligente”.
-
-Se um módulo começa a fazer mais de uma coisa, provavelmente precisa ser dividido.
+Every contribution must respect these principles.
 
 ---
 
-## 🔐 Segurança é Prioridade
+## 🧱 Architecture and Technical Guidelines
 
-Este projeto lida com dados sensíveis.
+The project adopts a modular architecture inspired by Unix philosophy:
 
-Regras fundamentais:
+> Each component does just one thing — and does it well.
 
-* Nunca exponha dados sensíveis em logs.
-* Não introduza telemetria.
-* Não envie dados para serviços externos sem necessidade explícita.
-* Prefira processamento local.
-* Use criptografia moderna e bem estabelecida.
-* Justifique qualquer escolha criptográfica no PR.
+When contributing:
 
-Contribuições que afetem segurança devem incluir:
+* Don't introduce unnecessary dependencies.
+* Avoid coupling between modules.
+* Prefer simplicity over excessive abstractions.
+* Maintain single responsibility per module.
+* Write readable code before "clever" code.
 
-* Explicação técnica clara
-* Justificativa das decisões
-* Possível análise de impacto
+If a module starts doing more than one thing, it probably needs to be split.
 
 ---
 
-## 🛠 Como Contribuir
+## 🔐 Security is Priority
 
-### 1️⃣ Abrir uma Issue
+This project deals with sensitive data.
 
-Antes de grandes mudanças:
+Fundamental rules:
 
-* Descreva o problema
-* Explique o caso de uso
-* Proponha abordagem
+* Never expose sensitive data in logs.
+* Don't introduce telemetry.
+* Don't send data to external services without explicit necessity.
+* Prefer local processing.
+* Use modern and well-established cryptography.
+* Justify any cryptographic choice in the PR.
 
-Discussões são bem-vindas.
+Contributions that affect security must include:
+
+* Clear technical explanation
+* Justification of decisions
+* Possible impact analysis
 
 ---
 
-### 2️⃣ Fork e Pull Request
+## 🛠 How to Contribute
 
-1. Faça um fork do repositório
-2. Crie uma branch clara:
+### 1️⃣ Open an Issue
+
+Before major changes:
+
+* Describe the problem
+* Explain the use case
+* Propose approach
+
+Discussions are welcome.
+
+---
+
+### 2️⃣ Fork and Pull Request
+
+1. Fork the repository
+2. Create a clear branch:
 
    ```
    feature/vault-adapter-linux
    fix/conflict-resolution-bug
    ```
-3. Escreva testes quando aplicável
-4. Envie o Pull Request
+3. Write tests when applicable
+4. Submit the Pull Request
 
-Explique:
+Explain:
 
-* O que foi alterado
-* Por que foi alterado
-* Impacto na arquitetura
-* Possíveis riscos
-
----
-
-## 🧪 Testes
-
-* Toda lógica de sincronização deve ser testável isoladamente.
-* Adaptadores devem ter testes de leitura/escrita.
-* Código criptográfico deve ter testes determinísticos quando possível.
-
-Se não for possível testar automaticamente, explique o motivo.
+* What was changed
+* Why it was changed
+* Impact on architecture
+* Possible risks
 
 ---
 
-## 🧼 Estilo de Código
+## 🧪 Tests
 
-* Código claro > código complexo
-* Comentários explicam decisões, não o óbvio
-* Nomes descritivos
-* Evite “magia”
-* Evite dependências pesadas sem justificativa
+* All synchronization logic must be testable in isolation.
+* Adapters must have read/write tests.
+* Cryptographic code must have deterministic tests when possible.
 
----
-
-## 🧩 Novos Adaptadores de Cofre
-
-Se você estiver adicionando suporte a um novo formato:
-
-* Separe claramente leitura e escrita
-* Não misture lógica de sincronização com parsing
-* Documente o formato
-* Explique limitações
-* Não quebre compatibilidade existente
+If automatic testing is not possible, explain why.
 
 ---
 
-## 🚫 O Que Não Aceitamos
+## 🧼 Code Style
 
-* Código proprietário incorporado
-* Dependência obrigatória de serviços comerciais
-* Telemetria oculta
-* Recursos que comprometam a autonomia do usuário
-* Funcionalidades que dificultem auditoria
-
----
-
-## 📜 Licenciamento
-
-Ao contribuir, você concorda que seu código será distribuído sob a mesma licença de Software Livre adotada pelo projeto.
-
-Certifique-se de que:
-
-* Você é autor do código enviado
-* Ou possui direito de contribuição
-* Ou o código é compatível com a licença do projeto
+* Clear code > complex code
+* Comments explain decisions, not the obvious
+* Descriptive names
+* Avoid "magic"
+* Avoid heavy dependencies without justification
 
 ---
 
-## ✊ Ética Antes de Conveniência
+## 🧩 New Vault Adapters
 
-VaultSync não é um produto para aprisionar usuários.
+If you are adding support for a new format:
 
-É uma ferramenta para libertar dados de silos digitais.
-
-Se sua contribuição aumenta:
-
-* Transparência
-* Modularidade
-* Segurança
-* Autonomia
-
-Ela será muito bem-vinda.
+* Clearly separate reading and writing
+* Don't mix synchronization logic with parsing
+* Document the format
+* Explain limitations
+* Don't break existing compatibility
 
 ---
 
-## 💬 Comunicação
+## 🚫 What We Don't Accept
 
-Respeito é obrigatório.
-
-* Discordâncias técnicas são naturais.
-* Ataques pessoais não são.
-* Argumente com base técnica.
-* Seja claro e objetivo.
+* Incorporated proprietary code
+* Mandatory dependency on commercial services
+* Hidden telemetry
+* Features that compromise user autonomy
+* Functionality that hinders auditing
 
 ---
 
-## 🙌 Obrigado
+## 📜 Licensing
 
-Contribuir com Software Livre é um ato político, técnico e comunitário.
+By contributing, you agree that your code will be distributed under the same Free Software license adopted by the project.
 
-Se você acredita que usuários devem ter controle sobre seus dados e ferramentas, você já faz parte deste projeto.
+Make sure that:
 
-Seja bem-vindo.
+* You are the author of the submitted code
+* Or you have the right to contribute
+* Or the code is compatible with the project's license
+
+---
+
+## ✊ Ethics Before Convenience
+
+VaultSync is not a product to imprison users.
+
+It's a tool to free data from digital silos.
+
+If your contribution increases:
+
+* Transparency
+* Modularity
+* Security
+* Autonomy
+
+It will be very welcome.
+
+---
+
+## 💬 Communication
+
+Respect is mandatory.
+
+* Technical disagreements are natural.
+* Personal attacks are not.
+* Argue on technical grounds.
+* Be clear and objective.
+
+---
+
+## 🙌 Thank You
+
+Contributing to Free Software is a political, technical, and community act.
+
+If you believe that users should have control over their data and tools, you are already part of this project.
+
+Welcome.

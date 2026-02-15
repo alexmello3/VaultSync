@@ -3,8 +3,8 @@
   <groupId>org.vaultsync</groupId>
   <artifactId>vaultsync</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>Sync Pass</name>
-  <description>Sincronizador de senhas entre cofres diferentes</description>
+  <name>VaultSync</name>
+  <description>Cross-platform password vault synchronizer</description>
 
 
   <properties>

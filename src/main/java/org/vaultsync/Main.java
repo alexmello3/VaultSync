@@ -2,34 +2,33 @@ package org.vaultsync;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.vaultsync.cofre.ICofre;
-import org.vaultsync.cofre.CofreFactory;
+import org.vaultsync.vault.IVault;
+import org.vaultsync.vault.VaultFactory;
 
 public class Main {
 
-	public static void main(String[] args) {
-		List<String> arquivos = new ArrayList<>();
-		List<ICofre> cofres = new ArrayList<>();
+    public static void main(String[] args) {
+        List<String> files = new ArrayList<>();
+        List<IVault> vaults = new ArrayList<>();
 
-		for (String arquivo : arquivos) {
-			try {
-				ICofre cofre = CofreFactory.criarCofre(arquivo);
-				cofres.add(cofre);
-			} catch (IllegalArgumentException e) {
-				System.out.println("Erro ao criar cofre para o arquivo " + arquivo + ": " + e.getMessage());
-			}
-		}
+        for (String file : files) {
+            try {
+                IVault vault = VaultFactory.createVault(file);
+                vaults.add(vault);
+            } catch (IllegalArgumentException e) {
+                System.out.println("Error creating vault for file " + file + ": " + e.getMessage());
+            }
+        }
 
-		 // Aqui você pode adicionar a lógica para comparar os cofres e sincronizar as senhas
-		 // Por exemplo, você pode iterar sobre os cofres e comparar as entradas, ou usar uma estrutura de dados para armazenar as senhas e facilitar a comparação
-		// Preciso desacoplar primeiro os tipos de cofre deixando os atributos na interface ICofre, e depois criar uma classe de comparação que recebe os cofres e faz a 
-		// comparação entre eles, gerando um relatório de diferenças ou similaridades entre os cofres e exportando cofres novos com as atualizações de ambos em ambos os arquivos.
+        // Here you can add logic to compare vaults and synchronize passwords
+        // For example, you can iterate over vaults and compare entries, or use a data structure to store passwords and facilitate comparison
+        // First need to decouple vault types by leaving attributes in the IVault interface, then create a comparison class that receives vaults and performs
+        // comparison between them, generating a report of differences or similarities between vaults and exporting new vaults with updates from both to both files.
 
-		
 
-		 
-		 System.out.println("Processamento concluído. Cofres criados: " + cofres.size());
-		
-	}
+
+        System.out.println("Processing completed. Vaults created: " + vaults.size());
+
+    }
 
 }

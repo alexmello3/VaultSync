@@ -1,8 +1,8 @@
-package org.vaultsync.cofre;
+package org.vaultsync.vault;
 
-import org.vaultsync.util.Constantes;
+import org.vaultsync.util.Constants;
 
-public class LinhaCofreSafari implements ILinhaCofre {
+public class SafariVaultEntry implements IVaultEntry {
     private String title;
     private String url;
     private String username;
@@ -10,7 +10,7 @@ public class LinhaCofreSafari implements ILinhaCofre {
     private String notes;
     private String otpAuth;
 
-    public LinhaCofreSafari(String title, String url, String username, String password, String notes, String otpAuth) {
+    public SafariVaultEntry(String title, String url, String username, String password, String notes, String otpAuth) {
         this.title = title;
         this.url = url;
         this.username = username;
@@ -57,8 +57,8 @@ public class LinhaCofreSafari implements ILinhaCofre {
     }
 
     @Override
-    public String getTipoCofre() {
-        return Constantes.TIPO_COFRE_SAFARI;
+    public String getVaultType() {
+        return Constants.VAULT_TYPE_SAFARI;
     }
 
     @Override
@@ -68,10 +68,10 @@ public class LinhaCofreSafari implements ILinhaCofre {
 
     @Override
     public boolean equals(Object obj) {
-        // Considera duas linhas iguais se tiverem a mesma URL e username, ignorando o password
+        // Consider two entries equal if they have the same URL and username, ignoring password
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
-        ILinhaCofre other = (ILinhaCofre) obj;
+        IVaultEntry other = (IVaultEntry) obj;
         return url.equals(other.getUrl()) && username.equals(other.getUsername());
     }
 }
